@@ -20,13 +20,19 @@ nameDB:<input type="text" name="nameDB"></br>
              echo "connessione riuscita";
              $conn->close();
              $file=fopen("D:\Utenti\russo.salvatore\Desktop\es-1\connessione\configurazione\configurazione.php");
-             $testo='<php
-             $db=array(
-                url=$ '
+            // $db[$_POST['servername'],$_POST['username'],$_POST['password'],$_POST['nameDB']];
+             $file.fwrite();
+             $file.close();
+             header('locate : http://russo.salvatore.tave.osdb.it/inizio_connessiome.html');
+
+
+
+
+               
          }
         
 
-         echo  header('locate : http://russo.salvatore.tave.osdb.it/inizio_connessiome.html/');
-        header('locate : http://russo.salvatore.tave.osdb.it/inizio_connessiome.html/');
+        header('locate : http://russo.salvatore.tave.osdb.it/inizio_connessiome.html');
+        header('locate : http://russo.salvatore.tave.osdb.it/inizio_connessiome.html');
     // }
 ?>
