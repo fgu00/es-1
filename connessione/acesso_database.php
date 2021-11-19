@@ -7,7 +7,6 @@ nameDB:<input type="text" name="nameDB"></br>
 <input type="submit" value="spedisci">
 </form>';
 
-    // if( !emply($_POST['servername'])&& !emply($_POST['username'])&&!emply($_POST['password'])&&!emply($_POST['nameDB'])){
          $host=$_POST['servername'];
          $user=$_POST['username'];
          $password=$_POST['password'];
@@ -19,20 +18,17 @@ nameDB:<input type="text" name="nameDB"></br>
          }else{
              echo "connessione riuscita";
              $conn->close();
-             $file=fopen("D:\Utenti\russo.salvatore\Desktop\es-1\connessione\configurazione\configurazione.php");
-            // $db[$_POST['servername'],$_POST['username'],$_POST['password'],$_POST['nameDB']];
-             $file.fwrite();
-             $file.close();
-             header('locate : http://russo.salvatore.tave.osdb.it/inizio_connessiome.html');
-
-
-
-
-               
+             $file=fopen(__DIR__."D:\Utenti\russo.salvatore\Desktop\es-1\connessione\configurazione\configurazione.php","w");
+            $testo='<?php
+            $db=array("url"=>$host,
+            "username"=>$user,
+            "password"=>$password,
+            "dbname"=>"$name"
+         );
+         define("BASE_URL","'.dirname($_SERVER['HTTP_REFERER']).'/");
+         ?>'; 
+            $file.fwrite($file,$testo);
+             $file.close($file);
+             header('locate : '.dirname($_SERVER['HTTP_REFERER'])."/insert.php");      
          }
-        
-
-        header('locate : http://russo.salvatore.tave.osdb.it/inizio_connessiome.html');
-        header('locate : http://russo.salvatore.tave.osdb.it/inizio_connessiome.html');
-    // }
 ?>
