@@ -4,7 +4,7 @@ path<input type="text" name="input"></br>
 nome del file<input type="text" name="nfile"></br>
 <input type="submit" values="invio">
 </form>';
-if(!emply($_POST['input'])){
+if(!empty($_POST['input'])){
 $path=$_POST['input'];
 $nfile=$_POST['nfile'];
 $completo=$path."/".$nfile;
