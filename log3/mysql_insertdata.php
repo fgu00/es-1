@@ -25,13 +25,12 @@
             $query = "INSERT INTO studente VALUES ('".$_POST["code"]."','".$_POST["nome"]."','".$_POST["cognome"]."','".$_POST["address"]."','".$_POST["phone"]."')";
             $rs = $conn->query($query);
             if(isset($rs)){
-                echo "<h3 style='color:blue'>Tupla aggiunta</h3>";
-            }else{
-                echo "<h3 style='color:red'>Impossibile aggiungere la Tupla</h3>";
+                fopen("log.txt","a+");
+                fwrite("inserimento riuscito");
+
+               // echo "<h3 style='color:blue'>Tupla aggiunta</h3>";
         }else{
-            die("Errore connessione al database");
+            fopen("log.txt","a+");
+            fwrite( die("Errore connessione al database"));
         }
-    } else{
-        echo "<h3 style='color:red'>Tutti i campi sono obbligatori</h3>";
-    }
 ?>
