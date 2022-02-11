@@ -11,7 +11,7 @@ if(!empty($_POST)){
     if($conn->connect_error){
         echo $conn->connect_error;
     }else{
-        $comando="INSERT INTO c190_primo.persona VALUES ($_POST['cf'],$_POST['nome'],$_POST['cognome'],$_POST['eta'])";
+        $comando="INSERT INTO persona ('cf','nome','cognome','eta') VALUES ($_POST['cf'],$_POST['nome'],$_POST['cognome'],$_POST['eta'])";
         $conn->querry($comando);
         if($conn->connect_error){
             echo $conn->connect_error;
