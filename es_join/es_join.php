@@ -6,6 +6,7 @@ nome<input type='text' nome='nome'>
 cognome<input type='text' nome='cognome'>
 età<input type='text' nome='eta'>
 </form>";
+//select per la tendina con <option per le opzioni
 if(!empty($_POST)){
     $conn=connDB2("localhost","root","","c190_primo");
     if($conn->connect_error){
