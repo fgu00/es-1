@@ -1,5 +1,5 @@
 <?php
-include "conn.php";
+include "conn_join.php";
 echo "<form action='es_join.php' method='POST'>
 codice fiscale<input type='text' nome='cf'>
 nome<input type='text' nome='nome'>
