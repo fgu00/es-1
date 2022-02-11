@@ -1,4 +1,5 @@
 <?php
+include "conn.php";
 echo "<form action='es_join.php' method='POST'>
 codice fiscale<input type='text' nome='cf'>
 nome<input type='text' nome='nome'>
@@ -15,7 +16,7 @@ if(!empty($_POST)){
         if($conn->connect_error){
             echo $conn->connect_error;
         }else{
-            
+
         }
     }
 }
